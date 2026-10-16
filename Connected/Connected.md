@@ -54,7 +54,7 @@ flowchart TD
     D --> E[Cron ejecuta el comando<br/>reverse shell]
     E --> F[Shell como asterisk<br/>uid 999]
     F --> G[LinPEAS<br/>incron corre como root]
-    G --> H[sysadmin_manager<br/>filtro no bloquea el pipe '|']
+    G --> H["sysadmin_manager<br/>filtro no bloquea el pipe #124;"]
     H --> I[Mecanismo .CONTENTS<br/>params desde el archivo]
     I --> J[Pipe injection<br/>system ejecuta como root]
     J --> K[Shell como root → root.txt]
@@ -396,6 +396,11 @@ if (preg_match('/[`\'"$><&;]/', $params))
 if (preg_match('/[`\'"$><&;|]/', $params))
 ```
 
+---
+
+<p align="center">
+  <sub>Escrito con fines <b>educativos</b>. Máquina resuelta en el laboratorio legal y controlado de HackTheBox.</sub>
+</p>
 ---
 
 <p align="center">
